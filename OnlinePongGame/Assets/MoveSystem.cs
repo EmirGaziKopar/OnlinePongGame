@@ -17,7 +17,7 @@ public class MoveSystem : MonoBehaviour
 
         if(pw.IsMine == true) //Biz isek yani aslýnda her iki oyuncuda birbirini beyaz görecek ama kendilerini kýrmýzý görecekler 
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            
         }
     }
 

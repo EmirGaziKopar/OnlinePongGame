@@ -32,7 +32,8 @@ public class ManageCodes : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined to Room");
-        GameObject gameObject = PhotonNetwork.Instantiate("Cube", Vector3.zero, Quaternion.identity, 0, null);
+        GameObject newPlayer = PhotonNetwork.Instantiate("Rod", Vector3.zero, Quaternion.identity, 0, null);
+        newPlayer.GetComponent<PhotonView>().Owner.NickName = Random.Range(1, 100) + "(Misafir)";
     }
 
     public override void OnLeftLobby()
